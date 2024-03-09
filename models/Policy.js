@@ -15,20 +15,19 @@ const PolicySchema = new Schema({
     require: true,
   },
   policy_category: {
-    type: Schema.Types.ObjectId,
-    ref: "LOB",
+    type: String,
     require: true,
   },
-  //   collection_id: {
-  //     name: Schema.Types.ObjectId,
-  //     ref: "User",
-  //   },
-  //   company_collection_id: {
-  //     name: Schema.Types.ObjectId,
-  //     ref: "User",
-  //   },
+  collection_id: {
+    type: Schema.Types.ObjectId,
+    ref: "Agent",
+  },
+  company_collection_id: {
+    type: Schema.Types.ObjectId,
+    ref: "Carrier",
+  },
   user_id: {
-    name: Schema.Types.ObjectId,
+    type: Schema.Types.ObjectId,
     ref: "User",
   },
 });
